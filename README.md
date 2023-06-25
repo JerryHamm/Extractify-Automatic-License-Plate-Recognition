@@ -92,3 +92,21 @@ set `LIBSO=1` to enable the creation of a dynamic library so that pre-compiled c
 The `make` command builds darknet so that the darknet executable file can be used to run detectors.
 
 Make sure you are in the darknet directory then run this command: `make`
+
+# Technologies Used
+
+- Darknet: Open-source neural network framework written in C and CUDA. It is used for training and implementing deep neural networks, including object detection models like YOLO (You Only Look Once).
+
+- YOLOv4: YOLOv4 (You Only Look Once version 4 a state-of-the-art real-time object detection model). The algorithm employs the YOLOv4-tiny variant for license plate detection. The algorithm uses Darknet for license plate detection.
+
+- PaddleOCR: PaddleOCR is an open-source optical character recognition (OCR) library based on PaddlePaddle, a deep learning platform. It is used for text recognition on cropped license plate images.
+
+- OpenCV: Open Source Computer Vision Library
+
+- Python: The algorithm is implemented in the Python programming language, which provides a wide range of libraries and tools.
+
+- FastAPI: a high-performance web framework for building APIs with Python. With FastAPI, you can create an API that exposes the ALPR algorithm's functionality, allowing users to send images for license plate recognition.
+
+- PIL (Python Imaging Library): PIL is a Python library for image processing. It provides functions for image loading, manipulation, enhancement, and filtering. The algorithm utilizes PIL for image preprocessing.
+
+- Computer Vision: The algorithm leverages computer vision techniques to process images and extract relevant information from license plates.
