@@ -1,11 +1,11 @@
 # Extractify-Automatic-License-Plate-Recognition API
-The License Plate Recognition API is a service that allows you to retrieve license plate information from an image. By sending an image containing a license plate, the API performs license plate recognition and returns a JSON response containing the license plate number.
+The Automatic License Plate Recognition (ALPR) API is a service that performs license plate recognition on an uploaded image and returns the result in JSON format. By sending an image containing a license plate, the API runs the ALPR algorithm and provides the recognized license plate information.
 
 # Usage
-To use the License Plate Recognition API, you need to send an HTTP POST request to the specified endpoint along with the image file in the request payload. The API will process the image and extract the license plate information. The response will be a JSON object containing the license plate number.
+To use the ALPR API, you need to send an HTTP POST request to the specified endpoint along with the image file in the request payload. The API will save the uploaded image, process it using the ALPR algorithm, and return a JSON response containing the recognized license plate information.
 
 **Endpoint**
-`POST /ALPR`
+`POST /api/ALPR`
 
 **Request**
 
@@ -14,7 +14,7 @@ To use the License Plate Recognition API, you need to send an HTTP POST request 
 
 _Request Parameters_
 
-- `image`: The image file containing the license plate. Include it as a form-data field in the request payload.
+- `file`: The image file containing the license plate. Include it as a form-data field in the request payload.
 
 **Response**
 
@@ -24,6 +24,11 @@ _Response Example_
 `["BXG7C59",90,[329,196],[451,243]]`
 
 # Setup and Installation
+
+To set up the ALPR API locally, follow these steps:
+
+## Clone the repository
+
 ## Install all required packages & libraries
 `pip install -r requirements.txt`
 ## Install OpenMP
