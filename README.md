@@ -1,7 +1,29 @@
 # Extractify-Automatic-License-Plate-Recognition API
 The License Plate Recognition API is a service that allows you to retrieve license plate information from an image. By sending an image containing a license plate, the API performs license plate recognition and returns a JSON response containing the license plate number.
 
-# Getting Started
+# Usage
+To use the License Plate Recognition API, you need to send an HTTP POST request to the specified endpoint along with the image file in the request payload. The API will process the image and extract the license plate information. The response will be a JSON object containing the license plate number.
+
+**Endpoint**
+`POST /ALPR`
+
+**Request**
+
+- Method: `POST`
+- Content-Type: `multipart/form-data`
+
+_Request Parameters_
+
+- `image`: The image file containing the license plate. Include it as a form-data field in the request payload.
+
+**Response**
+
+The API will respond with a JSON object containing the license plate number, the confidence of the OCR, and the top left and bottom right coordinates containing the license plate.
+
+_Response Example_
+`["BXG7C59",90,[329,196],[451,243]]`
+
+# Setup and Installation
 ## Install all required packages & libraries
 `pip install -r requirements.txt`
 ## Install OpenMP
@@ -63,12 +85,3 @@ set `LIBSO=1` to enable the creation of a dynamic library so that pre-compiled c
 The `make` command builds darknet so that the darknet executable file can be used to run detectors.
 
 Make sure you are in the darknet directory then run this command: `make`
-
-
-# Usage
-To use the License Plate Recognition API, you need to send an HTTP POST request to the specified endpoint along with the image file in the request payload. The API will process the image and extract the license plate information. The response will be a JSON object containing the license plate number.
-
-
-**ALPD.py:** Detects the license plate in an image and crops out the license plate from an image. It then runs OCR on the detected license plate, and returns a string containing the plate number, the confidence score of the OCR, and the top left and bottom right coordinates of the cropped area containing the license plate.
-
-**ALPD_api.py:** The automatic plate detector as an API.
