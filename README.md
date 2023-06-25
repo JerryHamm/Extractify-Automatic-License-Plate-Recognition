@@ -27,14 +27,21 @@ _Response Example_
 
 To set up the ALPR API locally, follow these steps:
 
-## 1. Clone the repository
+## 1. Install python
+### On Linux (Ubuntu, Debian):
+Check if python is already installed: `python3 --version`
+
+If python is  not installed run: `sudo apt install python3`
+
+## 2. Clone the repository
 
 `https://github.com/JerryHamm/Extractify-Automatic-License-Plate-Recognition.git`
 
-## 2. Install all required packages & libraries
+## 3. Install all required packages & libraries
 `pip install -r requirements.txt`
-## 3. Install OpenMP
-### On Linux (Ubuntu, Debian, etc.):
+
+## 4. Install OpenMP
+### On Linux (Ubuntu, Debian, etc...):
 Install GCC and OpenMP.
 
 `sudo apt install build-essential`
@@ -67,7 +74,7 @@ For Windows, you can use the MinGW-w64 distribution, which includes GCC with Ope
 
 3. Add the MinGW-w64 binaries to your system's PATH environment variable. The exact steps to do this depend on your version of Windows. You can find instructions online specific to your version of Windows.
 
-## 4. Configure Makefile
+## 5. Configure Makefile
 Enter the darknet directory: `cd darknet`
 
 Open and edit the Makefile: `nano Makefile`
@@ -88,7 +95,7 @@ set `AVX=1` and `OPENMP=1` to speedup on CPU (if errors occur then set AVX=0).
 
 set `LIBSO=1` to enable the creation of a dynamic library so that pre-compiled code can be dynamically linked and loaded at runtime by other programs.
 
-## 5. Make Darknet
+## 6. Make Darknet
 The `make` command builds darknet so that the darknet executable file can be used to run detectors.
 
 Make sure you are in the darknet directory then run this command: `make`
