@@ -1,4 +1,4 @@
-# Extractify-Automatic-License-Plate-Detector API
+# Extractify-Automatic-License-Plate-Recognition API
 The License Plate Recognition API is a service that allows you to retrieve license plate information from an image. By sending an image containing a license plate, the API performs license plate recognition and returns a JSON response containing the license plate number.
 
 # Getting Started
@@ -65,8 +65,9 @@ The `make` command builds darknet so that the darknet executable file can be use
 Make sure you are in the darknet directory then run this command: `make`
 
 
-# Automatic License Plate Detector
-In the main directory, there are two python files:
+# Usage
+To use the License Plate Recognition API, you need to send an HTTP POST request to the specified endpoint along with the image file in the request payload. The API will process the image and extract the license plate information. The response will be a JSON object containing the license plate number.
+
 
 **ALPD.py:** Detects the license plate in an image and crops out the license plate from an image. It then runs OCR on the detected license plate, and returns a string containing the plate number, the confidence score of the OCR, and the top left and bottom right coordinates of the cropped area containing the license plate.
 
