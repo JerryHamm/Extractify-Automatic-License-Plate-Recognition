@@ -33,8 +33,6 @@ To set up the ALPR API locally, follow these steps:
 
 Check if python is already installed: `python3 --version`
 
-If python is  not installed run: `sudo apt install python3`
-
 ## 2. Clone the repository
 
 `https://github.com/JerryHamm/Extractify-Automatic-License-Plate-Recognition.git`
