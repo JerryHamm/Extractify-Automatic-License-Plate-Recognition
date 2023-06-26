@@ -31,7 +31,7 @@ To set up the ALPR API locally, follow these steps:
 
 **Note: this project requires Python 3.7, 3.8, 3.9, or 3.10 to run**
 
-Check if python is already installed: `python3 --version`
+Check if python is already installed: `python --version`
 
 ## 2. Clone the repository
 
