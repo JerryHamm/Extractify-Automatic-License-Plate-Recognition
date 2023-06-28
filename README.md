@@ -27,7 +27,7 @@ The Automatic License Plate Recognition (ALPR) API is a service that performs li
    ```shell
    docker run -d -p 8000:8000 alpr-api
 
-4. The ALPR API is now accessible at 'http://localhost:8000'. You can send an image containing a license plate to the API and retrieve the license plate number.
+4. The ALPR API is now accessible at 'http://localhost:8000/ALPR'. You can send an image containing a license plate to the API and retrieve the license plate number.
 
 
 # API Documentation
