@@ -172,14 +172,15 @@ def filter_plate(plate_num):
     return plate_num_filtered
 
 
-#checking plate formats(LLLNNNN OR LLLNLNN) standard in brazil
+#checking plate formats(LLLNNNN OR LLLNLNN OR LLLNNLN) standard in brazil
 def check_plate_format(plate_num):
     # Define the formats to match against
     format1 = r'[A-Z]{3}[0-9]{4}'
     format2 = r'[A-Z]{3}[0-9]{1}[A-Z]{1}[0-9]{2}'
+    format3 = r'[A-Z]{3}[0-9]{2}[A-Z]{1}[0-9]{1}'
 
     # Check if the plate number matches either format
-    if re.match(format1, plate_num) or re.match(format2, plate_num):
+    if re.match(format1, plate_num) or re.match(format2, plate_num) or re.match(format3, plate_num):
         return True
     else:
         return False
@@ -206,6 +207,9 @@ def plate_format_filters(plate_num):
                 modified_plate_num += plate_num[i]
         #leaving the character at index 4 of the license plate unmodified due to plate format
         elif i == 4:
+            modified_plate_num += plate_num[i]
+        #leaving the character at index 5 of the license plate unmodified due to plate format
+        elif i == 5:
             modified_plate_num += plate_num[i]
         #addressing the remaining characters of the license plate
         else:
